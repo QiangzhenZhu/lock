@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.manage.ManageDeployFragment"
+    tools:ignore="ResourceName">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/title_manage_deploy"
+        android:textColor="@color/colorInfo"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_go_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="118dp"
+        android:background="#00000000"
+        android:drawablePadding="8dp"
+        android:drawableStart="@drawable/go_back"
+        android:text="@string/prompt_exit"
+        android:textColor="@color/colorWhite"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="116dp"
+        android:layout_height="69dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginTop="118dp"
+        android:background="@drawable/button_positive_bg"
+        android:text="@string/prompt_manage_save"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_install_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="168dp"
+        android:text="@string/prompt_manage_install_info"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.hzdongcheng.parcellocker.utils.RichEditText
+        android:id="@+id/et_device_id"
+        android:layout_width="360dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="@string/hint_manage_device_id"
+        android:inputType="text"
+        android:textSize="@dimen/prompt_info_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_install_info"
+        app:next="@+id/et_keyboard" />
+
+    <com.hzdongcheng.parcellocker.utils.RichEditText
+        android:id="@+id/et_device_name"
+        android:layout_width="548dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="@string/hint_manage_device_name"
+        android:inputType="text"
+        android:textSize="@dimen/prompt_info_size"
+        app:layout_constraintStart_toEndOf="@+id/et_device_id"
+        app:layout_constraintTop_toBottomOf="@+id/tv_install_info"
+        app:next="@+id/et_keyboard" />
+
+    <com.hzdongcheng.parcellocker.utils.RichEditText
+        android:id="@+id/et_device_site"
+        android:layout_width="945dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="@string/hint_manage_device_site"
+        android:inputType="text"
+        android:textSize="@dimen/prompt_info_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_device_id"
+        app:next="@+id/et_keyboard" />
+
+    <TextView
+        android:id="@+id/tv_server_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="26dp"
+        android:text="@string/prompt_manage_server_info"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_device_site" />
+
+    <com.hzdongcheng.parcellocker.utils.RichEditText
+        android:id="@+id/et_business_ip"
+        android:layout_width="236dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="@string/hint_manage_business_ip"
+        android:inputType="text"
+        android:textSize="@dimen/prompt_info_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_server_info"
+        app:next="@+id/et_keyboard" />
+
+    <com.hzdongcheng.parcellocker.utils.RichEditText
+        android:id="@+id/et_business_port"
+        android:layout_width="98dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="26dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="@string/hint_manage_server_port"
+        android:inputType="text"
+        android:textSize="@dimen/prompt_info_size"
+        app:layout_constraintStart_toEndOf="@+id/et_business_ip"
+        app:layout_constraintTop_toTopOf="@+id/et_business_ip"
+        app:next="@+id/et_keyboard" />
+
+    <com.hzdongcheng.parcellocker.utils.RichEditText
+        android:id="@+id/et_monitoring_ip"
+        android:layout_width="236dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="@string/hint_manage_monitoring_ip"
+        android:inputType="text"
+        android:textSize="@dimen/prompt_info_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_business_ip"
+        app:next="@+id/et_keyboard" />
+
+    <com.hzdongcheng.parcellocker.utils.RichEditText
+        android:id="@+id/et_monitoring_port"
+        android:layout_width="98dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="26dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="@string/hint_manage_server_port"
+        android:inputType="text"
+        android:textSize="@dimen/prompt_info_size"
+        app:layout_constraintStart_toEndOf="@+id/et_monitoring_ip"
+        app:layout_constraintTop_toTopOf="@+id/et_monitoring_ip"
+        app:next="@+id/et_keyboard" />
+
+    <TextView
+        android:id="@+id/tv_cabinet_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="215dp"
+        android:layout_marginTop="26dp"
+        android:text="@string/prompt_manage_cabinet_info"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintStart_toEndOf="@+id/tv_server_info"
+        app:layout_constraintTop_toBottomOf="@+id/et_device_site" />
+
+    <TextView
+        android:id="@+id/tv_run_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="@string/prompt_manage_run_state"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/prompt_info_size"
+        app:layout_constraintStart_toStartOf="@+id/tv_cabinet_info"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cabinet_info" />
+
+    <Switch
+        android:id="@+id/sh_normal_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:textOff="@string/prompt_manage_error"
+        android:textOn="@string/prompt_manage_normal"
+        android:textSize="@dimen/prompt_info_size"
+        app:layout_constraintStart_toEndOf="@+id/tv_run_state"
+        app:layout_constraintTop_toTopOf="@+id/tv_run_state" />
+
+    <TextView
+        android:id="@+id/tv_repulse_open"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:text="@string/prompt_manage_repulse_open"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/prompt_info_size"
+        app:layout_constraintStart_toStartOf="@+id/tv_run_state"
+        app:layout_constraintTop_toBottomOf="@+id/tv_run_state" />
+
+    <Switch
+        android:id="@+id/sh_repulse_onoff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:textOff="@string/prompt_manage_off"
+        android:textOn="@string/prompt_manage_on"
+        android:textSize="@dimen/prompt_info_size"
+        app:layout_constraintStart_toEndOf="@+id/tv_repulse_open"
+        app:layout_constraintTop_toTopOf="@+id/tv_repulse_open" />
+
+    <TextView
+        android:id="@+id/tv_voice_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:text="@string/prompt_manage_voice_hint"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/prompt_info_size"
+        app:layout_constraintStart_toEndOf="@+id/tv_run_state"
+        app:layout_constraintTop_toTopOf="@+id/tv_run_state" />
+
+    <Switch
+        android:id="@+id/sh_voice_onoff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:textOff="@string/prompt_manage_off"
+        android:textOn="@string/prompt_manage_on"
+        android:textSize="@dimen/prompt_info_size"
+        app:layout_constraintStart_toEndOf="@+id/tv_voice_hint"
+        app:layout_constraintTop_toTopOf="@+id/tv_voice_hint" />
+
+
+    <TextView
+        android:id="@+id/tv_detect_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="26dp"
+        android:text="@string/prompt_manage_detect_info"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_monitoring_ip" />
+
+    <TextView
+        android:id="@+id/tv_shake_detect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/prompt_manage_shake_detect"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/prompt_info_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_detect_info" />
+
+    <Switch
+        android:id="@+id/sh_shake_onoff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:textOff="@string/prompt_manage_off"
+        android:textOn="@string/prompt_manage_on"
+        android:textSize="@dimen/prompt_info_size"
+        app:layout_constraintStart_toEndOf="@+id/tv_shake_detect"
+        app:layout_constraintTop_toTopOf="@+id/tv_shake_detect" />
+
+    <TextView
+        android:id="@+id/tv_goods_detect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="252dp"
+        android:text="@string/prompt_manage_goods_detect"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/prompt_info_size"
+        app:layout_constraintStart_toEndOf="@+id/tv_shake_detect"
+        app:layout_constraintTop_toTopOf="@+id/tv_shake_detect" />
+
+    <Switch
+        android:id="@+id/sh_goods_onoff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:textOff="@string/prompt_manage_off"
+        android:textOn="@string/prompt_manage_on"
+        android:textSize="@dimen/prompt_info_size"
+        app:layout_constraintStart_toEndOf="@+id/tv_goods_detect"
+        app:layout_constraintTop_toTopOf="@+id/tv_goods_detect" />
+
+    <TextView
+        android:id="@+id/tv_power_detect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="199dp"
+        android:text="@string/prompt_manage_power_detect"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/prompt_info_size"
+        app:layout_constraintStart_toEndOf="@+id/tv_goods_detect"
+        app:layout_constraintTop_toTopOf="@+id/tv_goods_detect" />
+
+    <Switch
+        android:id="@+id/sh_power_onoff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:textOff="@string/prompt_manage_off"
+        android:textOn="@string/prompt_manage_on"
+        android:textSize="@dimen/prompt_info_size"
+        app:layout_constraintStart_toEndOf="@+id/tv_power_detect"
+        app:layout_constraintTop_toTopOf="@+id/tv_power_detect" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.manage.ManageSystemInfoFragment">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/title_manage_system_info"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/title_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_go_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="118dp"
+        android:background="#00000000"
+        android:drawablePadding="8dp"
+        android:drawableStart="@drawable/go_back"
+        android:text="@string/prompt_exit"
+        android:textColor="@color/colorWhite"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="157dp"
+        android:layout_marginTop="234dp"
+        android:text="@string/prompt_manage_system_time"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_system_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="356dp"
+        android:layout_marginTop="234dp"
+        android:textColor="@color/colorBlue"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="157dp"
+        android:layout_marginTop="303dp"
+        android:text="@string/prompt_manage_system_versions"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_system_versions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="356dp"
+        android:layout_marginTop="303dp"
+        android:textColor="@color/colorBlue"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_exit"
+        android:layout_width="332dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="744dp"
+        android:layout_marginStart="623dp"
+        android:background="@drawable/button_neutral_bg"
+        android:text="@string/prompt_manage_exit"
+        android:textColor="@color/colorBlue"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_system_log"
+        android:layout_width="332dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="744dp"
+        android:layout_marginStart="128dp"
+        android:background="@drawable/button_negative_bg"
+        android:text="@string/prompt_manage_system_log"
+        android:textSize="@dimen/input_text_size"
+        android:textColor="@color/colorInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

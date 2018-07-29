@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/default_bg"
+    tools:context=".views.deliver.DeliverBoxFaultFragment"
+    tools:ignore="HardcodedText">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="260dp"
+        android:drawablePadding="25dp"
+        android:drawableStart="@drawable/ic_success"
+        android:text="设置故障柜成功！"
+        android:textColor="@color/colorWhite"
+        android:textSize="64sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="370dp"
+        android:text="请返回主界面，重新操作钥匙存放"
+        android:textColor="@color/colorWhite"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/btn_go_back"
+        android:layout_width="220dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="476dp"
+        android:background="@drawable/button_negative_bg"
+        android:text="返回主界面"
+        android:textColor="@color/negative_foreground"
+        android:textSize="28sp" />
+
+</RelativeLayout>

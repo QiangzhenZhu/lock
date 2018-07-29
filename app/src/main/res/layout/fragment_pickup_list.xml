@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/default_bg"
+    tools:context=".views.pickup.PickupListFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="118dp"
+        android:text="取用列表"
+        android:textColor="@color/colorWhite"
+        android:textSize="32sp" />
+
+    <ListView
+        android:id="@+id/pickup_list_view"
+        android:layout_width="1030dp"
+        android:layout_height="440dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="193dp"
+        android:divider="#00FFFFFF"
+        android:dividerHeight="10dp"
+        android:fadeScrollbars="false"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        android:scrollbarSize="10dp"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbarThumbVertical="@drawable/scrollbar_v_thumb"
+        android:scrollbarTrackVertical="@drawable/scrollbar_v_track" />
+
+    <Button
+        android:id="@+id/btn_go_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="120dp"
+        android:background="#00FFFFFF"
+        android:drawablePadding="8dp"
+        android:drawableStart="@drawable/go_back"
+        android:text="@string/prompt_exit"
+        android:textColor="@color/colorWhite"
+        android:textSize="28sp" />
+
+    <Button
+        android:id="@+id/bt_clear"
+        android:layout_width="220dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp"
+        android:layout_marginEnd="20dp"
+        android:layout_toStartOf="@+id/bt_check_all"
+        android:background="@drawable/button_negative_bg"
+        android:text="取消全选"
+        android:textColor="@color/negative_foreground"
+        android:textSize="28sp" />
+
+    <Button
+        android:id="@+id/bt_check_all"
+        android:layout_width="220dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70dp"
+        android:background="@drawable/button_negative_bg"
+        android:text="全选"
+        android:textColor="@color/negative_foreground"
+        android:textSize="28sp" />
+
+    <Button
+        android:id="@+id/bt_submit"
+        android:layout_width="220dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/bt_check_all"
+        android:background="@drawable/button_positive_bg"
+        android:text="取用"
+        android:textColor="@color/colorWhite"
+        android:textSize="28sp" />
+</RelativeLayout>

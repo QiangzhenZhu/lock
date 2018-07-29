@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.manage.ManageLoginFragment">
+
+    <Button
+        android:id="@+id/btn_go_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="118dp"
+        android:background="#00000000"
+        android:drawablePadding="8dp"
+        android:drawableStart="@drawable/go_back"
+        android:text="@string/prompt_exit"
+        android:textColor="@color/colorWhite"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.hzdongcheng.parcellocker.utils.RichEditText
+        android:id="@+id/et_manager_id"
+        android:layout_width="@dimen/edit_text_width"
+        android:layout_height="@dimen/edit_text_hegiht"
+        android:layout_marginTop="254dp"
+        android:background="@drawable/edit_text_bg"
+        android:focusable="true"
+        android:hint="@string/hint_manage_id"
+        android:inputType="text"
+        android:textColor="@color/colorWhite"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:next="@+id/et_keyboard" />
+
+    <com.hzdongcheng.parcellocker.utils.RichEditText
+        android:id="@+id/et_manager_pwd"
+        android:layout_width="@dimen/edit_text_width"
+        android:layout_height="@dimen/edit_text_hegiht"
+        android:layout_marginTop="62dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="@string/hint_manage_pwd"
+        android:inputType="textPassword"
+        android:textColor="@color/colorWhite"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_manager_id"
+        app:next="@+id/et_keyboard" />
+
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/colorError"
+        android:textSize="@dimen/prompt_info_size"
+        app:layout_constraintBottom_toTopOf="@+id/btn_login"
+        app:layout_constraintEnd_toEndOf="@+id/btn_login"
+        app:layout_constraintStart_toStartOf="@+id/btn_login" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="@dimen/edit_text_width"
+        android:layout_height="67dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/button_positive_bg"
+        android:text="@string/prompt_sure"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintStart_toStartOf="@+id/et_manager_pwd"
+        app:layout_constraintTop_toBottomOf="@+id/et_manager_pwd" />
+
+
+</android.support.constraint.ConstraintLayout>

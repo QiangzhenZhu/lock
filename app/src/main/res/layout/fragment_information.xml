@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#00000000"
+    tools:context=".views.widget.InformationFragment">
+
+    <View
+        android:id="@+id/view_bg"
+        android:layout_width="460dp"
+        android:layout_height="207dp"
+        android:layout_centerHorizontal="true"
+        android:background="#FFFFFF" />
+
+    <View
+        android:id="@+id/line_horizontal"
+        android:layout_width="400dp"
+        android:layout_height="1dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="78dp"
+        android:background="#3006304A" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/prompt_pickup_code"
+        android:textColor="#105076"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:text="@string/prompt_pickup_rush_pwd"
+        android:textColor="#105076"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/bt_positive"
+        android:layout_width="220dp"
+        android:layout_height="70dp"
+        android:layout_alignEnd="@id/view_bg"
+        android:layout_below="@+id/view_bg"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_positive_bg"
+        android:text="@string/prompt_sure"
+        android:textColor="@color/colorWhite"
+        android:textSize="28sp" />
+
+
+    <Button
+        android:id="@+id/bt_negative"
+        android:layout_width="220dp"
+        android:layout_height="70dp"
+        android:layout_alignStart="@id/view_bg"
+        android:layout_below="@+id/view_bg"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_negative_bg"
+        android:text="@string/prompt_manage_cancel"
+        android:textColor="@color/negative_foreground"
+        android:textSize="28sp" />
+
+</RelativeLayout>

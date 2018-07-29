@@ -1,0 +1,4 @@
+include ':app',':persistent', ':bll', ':bll-core',':device'
+project(':persistent').projectDir=new File('../Cabinet-trunk/persistent')
+project(':bll-core').projectDir=new File('../Cabinet-trunk/bll-core')
+project(':device').projectDir=new File('../Cabinet-trunk/device')

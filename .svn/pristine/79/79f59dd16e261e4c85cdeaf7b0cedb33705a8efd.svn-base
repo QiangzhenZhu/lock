@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".views.manage.DialogAddCabinetFragment">
+
+    <TextView
+        android:id="@+id/tv_desk_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="350dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="13dp"
+        android:text="@string/prompt_manage_deskno"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/prompt_info_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_desk_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text=""
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_desk_info"
+        app:layout_constraintStart_toEndOf="@+id/tv_desk_info" />
+
+    <TextView
+        android:id="@+id/tv_box_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginStart="60dp"
+        android:text="@string/prompt_manage_box_amount"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/prompt_info_size"
+        app:layout_constraintStart_toEndOf="@+id/tv_desk_info"
+        app:layout_constraintTop_toTopOf="@+id/tv_desk_info" />
+
+    <Spinner
+        android:id="@+id/sp_package_statue"
+        android:layout_width="96dp"
+        android:layout_height="@dimen/manage_text_hegiht"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/spinner_background"
+        android:entries="@array/box_counts"
+        android:textSize="@dimen/prompt_info_size"
+        app:layout_constraintStart_toEndOf="@id/tv_box_amount"
+        app:layout_constraintTop_toTopOf="@id/tv_box_amount" />
+
+    <TextView
+        android:id="@+id/tv_desk_type"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/prompt_manage_desktype"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/prompt_info_size"
+        app:layout_constraintStart_toStartOf="@+id/tv_desk_info"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desk_info" />
+
+    <RadioGroup
+        android:id="@+id/rg_desk_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/tv_desk_type"
+        app:layout_constraintTop_toBottomOf="@id/tv_desk_type">
+
+        <RadioButton
+            android:id="@+id/rbtn_common_desk"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_desk_type"
+            android:button="@null"
+            android:text="@string/prompt_manage_common_desk"
+            android:textAlignment="center"
+            android:textColor="@color/colorInfo"
+            android:textSize="@dimen/prompt_info_size" />
+
+        <RadioButton
+            android:id="@+id/rbtn_fresh_desk"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/button_desk_type"
+            android:button="@null"
+            android:text="@string/prompt_manage_fresh_desk"
+            android:textAlignment="center"
+            android:textColor="@color/colorInfo"
+            android:textSize="@dimen/prompt_info_size" />
+
+        <RadioButton
+            android:id="@+id/rbtn_heat_desk"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/button_desk_type"
+            android:button="@null"
+            android:text="@string/prompt_manage_heat_desk"
+            android:textAlignment="center"
+            android:textColor="@color/colorInfo"
+            android:textSize="@dimen/prompt_info_size" />
+
+        <RadioButton
+            android:id="@+id/rbtn_laundry_desk"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/button_desk_type"
+            android:button="@null"
+            android:text="@string/prompt_manage_laundry_desk"
+            android:textAlignment="center"
+            android:textColor="@color/colorInfo"
+            android:textSize="@dimen/prompt_info_size" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="17dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/rg_desk_type"
+        app:layout_constraintTop_toTopOf="@+id/rg_desk_type" />
+
+    <Button
+        android:id="@+id/bt_manage_cancle"
+        android:layout_width="@dimen/edit_text_width"
+        android:layout_height="67dp"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/button_positive_bg"
+        android:text="@string/prompt_manage_confirm"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

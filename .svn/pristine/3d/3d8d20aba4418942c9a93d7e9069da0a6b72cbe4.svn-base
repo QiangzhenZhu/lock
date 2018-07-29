@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    tools:context=".views.manage.DialogSetupBoxFragment">
+
+    <TextView
+        android:id="@+id/tv_desk_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginBottom="437dp"
+        android:text="@string/prompt_manage_deskno"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/prompt_info_size"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_desk_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="0"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_desk_info"
+        app:layout_constraintStart_toEndOf="@+id/tv_desk_info" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginStart="52dp"
+        android:text="@string/prompt_manage_boxno"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/prompt_info_size"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_desk_info" />
+
+    <TextView
+        android:id="@+id/tv_box_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:text="1"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_desk_info"
+        app:layout_constraintStart_toEndOf="@+id/tv_desk_info" />
+
+    <Switch
+        android:id="@+id/sh_normal_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="@string/prompt_manage_error"
+        android:textOff="@string/prompt_manage_normal"
+        android:textSize="@dimen/prompt_info_size"
+        android:layout_marginStart="15dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_box_id"
+        app:layout_constraintTop_toTopOf="@+id/tv_desk_info"/>
+
+
+    <Button
+        android:id="@+id/btn_small_box"
+        android:layout_width="145dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="51dp"
+        android:background="@drawable/button_box_type"
+        android:text="@string/prompt_manage_small_box"
+        android:textSize="@dimen/prompt_info_size"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintStart_toStartOf="@+id/tv_desk_info"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desk_info"/>
+
+    <Button
+        android:id="@+id/btn_mini_box"
+        android:layout_width="145dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="57dp"
+        android:background="@drawable/button_box_type"
+        android:text="@string/prompt_manage_mini_box"
+        android:textSize="@dimen/prompt_info_size"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintStart_toEndOf="@+id/btn_small_box"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_small_box" />
+
+    <TextView
+        android:layout_width="17dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/btn_mini_box"
+        app:layout_constraintStart_toEndOf="@+id/btn_mini_box" />
+
+    <Button
+        android:id="@+id/btn_middle_box"
+        android:layout_width="145dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_box_type"
+        android:text="@string/prompt_manage_middle_box"
+        android:textSize="@dimen/input_text_size"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintStart_toStartOf="@+id/btn_small_box"
+        app:layout_constraintTop_toBottomOf="@+id/btn_small_box"/>
+
+    <Button
+        android:id="@+id/btn_large_box"
+        android:layout_width="145dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_box_type"
+        android:text="@string/prompt_manage_large_box"
+        android:textSize="@dimen/input_text_size"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintStart_toStartOf="@+id/btn_middle_box"
+        app:layout_constraintTop_toBottomOf="@+id/btn_middle_box"/>
+
+    <Button
+        android:id="@+id/btn_Super_box"
+        android:layout_width="145dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="57dp"
+        android:background="@drawable/button_box_type"
+        android:text="@string/prompt_manage_Super_box"
+        android:textSize="@dimen/input_text_size"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintStart_toEndOf="@+id/btn_large_box"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_large_box"/>
+
+
+    <Button
+        android:id="@+id/btn_control_box"
+        android:layout_width="145dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_box_control"
+        android:text="@string/prompt_manage_control_box"
+        android:textSize="@dimen/input_text_size"
+        android:textColor="@color/colorInfo"
+        app:layout_constraintStart_toStartOf="@+id/btn_large_box"
+        app:layout_constraintTop_toBottomOf="@+id/btn_large_box"/>
+
+    <Button
+        android:id="@+id/btn_adv_box"
+        android:layout_width="145dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="57dp"
+        android:background="@drawable/button_box_control"
+        android:text="@string/prompt_manage_adv_box"
+        android:textSize="@dimen/input_text_size"
+        android:textColor="@color/colorInfo"
+        app:layout_constraintStart_toEndOf="@+id/btn_control_box"
+        app:layout_constraintTop_toTopOf="@+id/btn_control_box"/>
+
+
+
+</android.support.constraint.ConstraintLayout>

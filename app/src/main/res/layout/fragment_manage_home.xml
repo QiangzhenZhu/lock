@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.manage.ManageHomeFragment"
+    tools:ignore="ResourceName">
+
+    <Button
+        android:id="@+id/btn_go_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="118dp"
+        android:background="#00000000"
+        android:drawablePadding="8dp"
+        android:drawableStart="@drawable/go_back"
+        android:text="@string/prompt_exit"
+        android:textColor="@color/colorWhite"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_deploy"
+        android:layout_width="209dp"
+        android:layout_height="209dp"
+        android:layout_marginStart="371dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/button_background"
+        android:button="@null"
+        android:drawableTop="@drawable/manange_deploy"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:text="@string/prompt_manage_deploy"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_record"
+        android:layout_width="209dp"
+        android:layout_height="209dp"
+        android:layout_marginStart="371dp"
+        android:layout_marginTop="126dp"
+        android:background="@drawable/button_background"
+        android:button="@null"
+        android:drawableTop="@drawable/manage_records"
+        android:gravity="center"
+        android:paddingTop="32dp"
+        android:text="@string/prompt_manage_records"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_deploy" />
+
+    <Button
+        android:id="@+id/btn_detect"
+        android:layout_width="209dp"
+        android:layout_height="209dp"
+        android:layout_marginStart="120dp"
+        android:background="@drawable/button_background"
+        android:button="@null"
+        android:drawableTop="@drawable/manage_detect"
+        android:gravity="center"
+        android:paddingTop="32dp"
+        android:text="@string/prompt_manage_detect"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintStart_toEndOf="@+id/btn_deploy"
+        app:layout_constraintTop_toTopOf="@+id/btn_deploy" />
+
+    <Button
+        android:id="@+id/btn_system_info"
+        android:layout_width="209dp"
+        android:layout_height="209dp"
+        android:layout_marginStart="120dp"
+        android:background="@drawable/button_background"
+        android:button="@null"
+        android:drawableTop="@drawable/manage_systeminfo"
+        android:gravity="center"
+        android:paddingTop="32dp"
+        android:text="@string/prompt_manage_system_info"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintStart_toEndOf="@+id/btn_record"
+        app:layout_constraintTop_toTopOf="@+id/btn_record" />
+
+</android.support.constraint.ConstraintLayout>

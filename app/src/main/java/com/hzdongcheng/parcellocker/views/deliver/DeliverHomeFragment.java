@@ -1,0 +1,128 @@
+package com.hzdongcheng.parcellocker.views.deliver;
+
+import android.arch.lifecycle.ViewModelProviders;
+import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.CheckBox;
+import android.widget.GridLayout;
+
+import com.hzdongcheng.parcellocker.R;
+import com.hzdongcheng.parcellocker.utils.ToastUtils;
+import com.hzdongcheng.parcellocker.utils.WrapperFragment;
+import com.hzdongcheng.parcellocker.viewmodel.DeliverViewmodel;
+import com.hzdongcheng.parcellocker.viewmodel.MainViewmodel;
+import com.hzdongcheng.parcellocker.views.navigate.NavigateHomeFragment;
+import com.hzdongcheng.parcellocker.views.widget.InformationFragment;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import butterknife.Unbinder;
+
+/**
+ * 仓管员指纹列表-账户登录后界面
+ */
+public class DeliverHomeFragment extends WrapperFragment implements InformationFragment.OnFragmentInteractionListener {
+    InformationFragment informationFragment;
+    Unbinder unbinder;
+    DeliverViewmodel deliverViewmodel;
+    @BindView(R.id.gl_finger)
+    GridLayout glFinger;
+    List<Integer> index = new ArrayList<>();
+
+    public DeliverHomeFragment() {
+    }
+
+    public static DeliverHomeFragment newInstance(String param1, String param2) {
+        DeliverHomeFragment fragment = new DeliverHomeFragment();
+        Bundle args = new Bundle();
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_deliver_home, container, false);
+        unbinder = ButterKnife.bind(this, view);
+        deliverViewmodel = ViewModelProviders.of((FragmentActivity) getActivity()).get(DeliverViewmodel.class);
+        initView();
+        return view;
+    }
+
+    private void initView() {
+        loadFinger();
+    }
+
+    private void loadFinger() {
+        int size = deliverViewmodel.fingerBeans.size();
+        for (int i = 0; i < size; i++) {
+            glFinger.getChildAt(i).setEnabled(true);
+        }
+    }
+
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
+    }
+
+    @OnClick(R.id.btn_go_back)
+    public void onBtnGoBackClicked() {
+        ViewModelProviders.of((FragmentActivity) getActivity()).get(MainViewmodel.class).mainModel.getCurrentFragment().setValue(NavigateHomeFragment.newInstance());
+    }
+
+    @OnClick(R.id.bt_submit)
+    public void onViewClicked() {
+        deliverViewmodel.addFinger();
+    }
+
+    @OnClick(R.id.bt_clear)
+    public void onBtClearClicked() {
+        index.clear();
+        int count = glFinger.getChildCount();
+        for (int i = count - 1; i >= 0; i--) {
+            if (((CheckBox) glFinger.getChildAt(i)).isChecked()) {
+                index.add(i);
+            }
+        }
+        if (index.size() < 1) {
+            ToastUtils.showLong("请选择要清除的指纹");
+            return;
+        }
+        if (informationFragment == null) {
+            informationFragment = InformationFragment.newInstance("清除指纹", "确定删除所选指纹？");
+            informationFragment.setOnFragmentInteractionListener(this);
+        }
+        informationFragment.show(getChildFragmentManager(), InformationFragment.class.getName());
+    }
+
+    @Override
+    public void onFragmentInteraction(View view) {
+
+       if (view.getId() == R.id.bt_positive) {
+          for (int i = 0; i < glFinger.getChildCount(); i++) {
+                glFinger.getChildAt(i).setEnabled(false);
+                ((CheckBox) glFinger.getChildAt(i)).setChecked(false);
+          }
+          deliverViewmodel.delFinger(index);
+          loadFinger();
+       }
+          informationFragment.dismiss();
+
+    }
+}

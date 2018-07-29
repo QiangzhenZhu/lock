@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--文字sp  尺寸dp-->
+    <dimen name="home_welcome_size">48sp</dimen>
+    <dimen name="home_pickup_size">46sp</dimen>
+    <dimen name="input_text_size">36sp</dimen>
+    <dimen name="title_text_size">48sp</dimen>
+    <dimen name="prompt_info_size">24sp</dimen>
+    <dimen name="prompt_list_size">20sp</dimen>
+    <dimen name="edit_text_width">420dp</dimen>
+    <dimen name="edit_text_hegiht">67dp</dimen>
+    <dimen name="tablerow_hegiht">943dp</dimen>
+    <dimen name="manage_text_width">192dp</dimen>
+    <dimen name="manage_text_hegiht">40dp</dimen>
+</resources>

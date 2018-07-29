@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.navigate.NavigateHomeFragment">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="102dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/banner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/bt_pickup"
+        android:layout_width="258dp"
+        android:layout_height="258dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginTop="240dp"
+        android:background="@drawable/home_pickup_bg"
+        android:drawableTop="@drawable/pickup"
+        android:paddingTop="41dp"
+        android:text="@string/home_pickup"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/home_pickup_size"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteY="62dp" />
+
+    <Button
+        android:id="@+id/bt_delivery"
+        android:layout_width="258dp"
+        android:layout_height="258dp"
+        android:layout_marginStart="43dp"
+        android:background="@drawable/home_delivery_bg"
+        android:drawableTop="@drawable/delivery"
+        android:paddingTop="41dp"
+        android:text="@string/home_courier"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/home_pickup_size"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/bt_pickup" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"
+        tools:layout_editor_absoluteX="480dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <Button
+        android:id="@+id/btn_rush"
+        android:layout_width="220dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="80dp"
+        android:layout_marginEnd="320dp"
+        android:background="@drawable/home_query_bg"
+        android:drawableStart="@drawable/repeal"
+        android:paddingEnd="36dp"
+        android:paddingStart="36dp"
+        android:text="@string/prompt_home_rush"
+        android:textColor="@color/colorWhite"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btn_finger"
+        android:layout_width="220dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="80dp"
+        android:layout_marginEnd="80dp"
+        android:background="@drawable/home_finger_bg"
+        android:drawableStart="@drawable/finger"
+        android:paddingEnd="36dp"
+        android:paddingStart="36dp"
+        android:text="@string/home_finger"
+        android:textColor="#1D7CB2"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/rl_breakdown"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="137dp"
+        android:layout_marginTop="132dp"
+        android:background="#D0E0E0E0"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="10dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="185dp"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/triangle"
+            android:gravity="center"
+            android:text="@string/home_breakdown"
+            android:textColor="@color/colorInfo"
+            android:textSize="60sp" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".views.manage.DialogSetupCabinetFragment">
+
+    <TextView
+        android:id="@+id/tv_desk_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="400dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="13dp"
+        android:text="@string/prompt_manage_desk_height"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/prompt_info_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/prompt_manage_desk"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintStart_toStartOf="@+id/tv_desk_size"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desk_size" />
+
+    <EditText
+        android:id="@+id/et_desk_size"
+        android:layout_width="96dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/spinner_background"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/prompt_info_size"
+        app:layout_constraintStart_toStartOf="@+id/tv_desk_size"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desk_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:text="@string/prompt_manage_small_box"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintStart_toStartOf="@+id/tv_desk_size"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desk_size" />
+
+    <Spinner
+        android:id="@+id/sp_small_size"
+        android:layout_width="96dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/spinner_background"
+        android:entries="@array/box_size"
+        app:layout_constraintStart_toStartOf="@+id/tv_desk_size"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desk_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:text="@string/prompt_manage_middle_box"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintStart_toStartOf="@+id/tv_desk_size"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desk_size" />
+
+    <Spinner
+        android:id="@+id/sp_middle_size"
+        android:layout_width="96dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/spinner_background"
+        android:entries="@array/box_size"
+        app:layout_constraintStart_toStartOf="@+id/tv_desk_size"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desk_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="210dp"
+        android:text="@string/prompt_manage_large_box"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintStart_toStartOf="@+id/tv_desk_size"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desk_size" />
+
+    <Spinner
+        android:id="@+id/sp_large_size"
+        android:layout_width="96dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="210dp"
+        android:background="@drawable/spinner_background"
+        android:entries="@array/box_size"
+        app:layout_constraintStart_toStartOf="@+id/tv_desk_size"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desk_size" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="270dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/prompt_manage_mini_box"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintStart_toStartOf="@+id/tv_desk_size"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desk_size" />
+
+    <Spinner
+        android:id="@+id/sp_mini_size"
+        android:layout_width="96dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="410dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/spinner_background"
+        android:entries="@array/box_size"
+        app:layout_constraintStart_toStartOf="@+id/tv_desk_size"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desk_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="270dp"
+        android:layout_marginTop="90dp"
+        android:text="@string/prompt_manage_Super_box"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintStart_toStartOf="@+id/tv_desk_size"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desk_size" />
+
+    <Spinner
+        android:id="@+id/sp_super_size"
+        android:layout_width="96dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="410dp"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/spinner_background"
+        android:entries="@array/box_size"
+        app:layout_constraintStart_toStartOf="@+id/tv_desk_size"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desk_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="270dp"
+        android:layout_marginTop="150dp"
+        android:text="@string/prompt_manage_control_box"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintStart_toStartOf="@+id/tv_desk_size"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desk_size" />
+
+    <Spinner
+        android:id="@+id/sp_control_size"
+        android:layout_width="96dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="410dp"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/spinner_background"
+        android:entries="@array/box_size"
+        app:layout_constraintStart_toStartOf="@+id/tv_desk_size"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desk_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="270dp"
+        android:layout_marginTop="210dp"
+        android:text="@string/prompt_manage_adv_box"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintStart_toStartOf="@+id/tv_desk_size"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desk_size" />
+
+    <Spinner
+        android:id="@+id/sp_adv_size"
+        android:layout_width="96dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="410dp"
+        android:layout_marginTop="210dp"
+        android:background="@drawable/spinner_background"
+        android:entries="@array/box_size"
+        app:layout_constraintStart_toStartOf="@+id/tv_desk_size"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desk_size" />
+
+    <TextView
+        android:layout_width="17dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/sp_adv_size"
+        app:layout_constraintTop_toTopOf="@+id/sp_adv_size" />
+
+    <Button
+        android:id="@+id/bt_manage_confirm"
+        android:layout_width="@dimen/edit_text_width"
+        android:layout_height="67dp"
+        android:layout_marginTop="340dp"
+        android:background="@drawable/button_positive_bg"
+        android:text="@string/prompt_manage_confirm"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.manage.ManageRecordsFragment">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/title_manage_records"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/title_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_go_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="118dp"
+        android:background="#00000000"
+        android:drawablePadding="8dp"
+        android:drawableStart="@drawable/go_back"
+        android:text="@string/prompt_exit"
+        android:textColor="@color/colorWhite"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <Button
+        android:id="@+id/btn_query"
+        android:layout_width="116dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="163dp"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/button_positive_bg"
+        android:text="@string/prompt_manage_query"
+        android:textSize="@dimen/input_text_size"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_start_date"
+        android:layout_width="@dimen/manage_text_width"
+        android:layout_height="@dimen/manage_text_hegiht"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="163dp"
+        android:background="@drawable/edit_text_bg"
+        android:drawableRight="@drawable/button_time"
+        android:paddingRight="11dp"
+        android:textSize="@dimen/prompt_info_size"
+        android:hint="@string/prompt_manage_start_time"
+        android:textColor="@color/colorInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_end_date"
+        android:layout_width="@dimen/manage_text_width"
+        android:layout_height="@dimen/manage_text_hegiht"
+        android:layout_marginStart="57dp"
+        android:background="@drawable/edit_text_bg"
+        android:drawableRight="@drawable/button_time"
+        android:hint="@string/prompt_manage_over_tiem"
+        android:paddingRight="11dp"
+        android:textSize="@dimen/prompt_info_size"
+        android:textColor="@color/colorInfo"
+        app:layout_constraintStart_toEndOf="@id/btn_start_date"
+        app:layout_constraintTop_toTopOf="@id/btn_start_date"/>
+
+    <com.hzdongcheng.parcellocker.utils.RichEditText
+        android:id="@+id/et_phono_id"
+        android:layout_width="@dimen/manage_text_width"
+        android:layout_height="@dimen/manage_text_hegiht"
+        android:layout_marginStart="60dp"
+        android:background="@drawable/edit_text_bg"
+        android:focusable="true"
+        android:hint="@string/hint_manage_telhone"
+        android:inputType="text"
+        android:textSize="@dimen/prompt_info_size"
+        app:layout_constraintStart_toEndOf="@id/btn_end_date"
+        app:layout_constraintTop_toTopOf="@id/btn_end_date"
+        app:next="@+id/et_keyboard" />
+
+    <Spinner
+        android:id="@+id/sp_package_statue"
+        android:layout_width="@dimen/manage_text_width"
+        android:layout_height="@dimen/manage_text_hegiht"
+        android:background="@drawable/button_background"
+        android:layout_marginStart="60dp"
+        android:entries="@array/package_status"
+        android:textSize="@dimen/prompt_info_size"
+        android:hint="@string/hint_manage_package_statue"
+        app:layout_constraintStart_toEndOf="@id/et_phono_id"
+        app:layout_constraintTop_toTopOf="@id/et_phono_id" />
+
+    <com.hzdongcheng.parcellocker.utils.RichEditText
+        android:id="@+id/et_package_id"
+        android:layout_width="441dp"
+        android:layout_height="@dimen/manage_text_hegiht"
+        android:layout_marginTop="33dp"
+        android:background="@drawable/edit_text_bg"
+        android:focusable="true"
+        android:hint="@string/hint_manage_package"
+        android:inputType="text"
+        android:textSize="@dimen/prompt_info_size"
+        app:layout_constraintStart_toStartOf="@id/btn_start_date"
+        app:layout_constraintTop_toBottomOf="@id/btn_start_date"
+        app:next="@+id/et_keyboard" />
+
+    <com.hzdongcheng.parcellocker.utils.RichEditText
+        android:id="@+id/et_courier_id"
+        android:layout_width="@dimen/manage_text_width"
+        android:layout_height="@dimen/manage_text_hegiht"
+        android:layout_marginStart="60dp"
+        android:background="@drawable/edit_text_bg"
+        android:focusable="true"
+        android:hint="@string/hint_manage_courier"
+        android:inputType="text"
+        android:textSize="@dimen/prompt_info_size"
+        app:layout_constraintStart_toEndOf="@id/et_package_id"
+        app:layout_constraintTop_toTopOf="@id/et_package_id"
+        app:next="@+id/et_keyboard" />
+
+    <TableRow
+        android:layout_width="@dimen/tablerow_hegiht"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:background="@color/colorList"
+        android:padding="15dp"
+        app:layout_constraintStart_toStartOf="@id/et_package_id"
+        app:layout_constraintTop_toBottomOf="@id/et_package_id">
+
+        <TextView
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@color/colorList"
+            android:gravity="center"
+            android:text="@string/prompt_manage_deliver_time"
+            android:textColor="@color/colorlisttv"
+            android:textSize="@dimen/prompt_info_size"/>
+
+        <TextView
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.5"
+            android:background="@color/colorList"
+            android:gravity="center"
+            android:text="@string/prompt_manage_package"
+            android:textColor="@color/colorlisttv"
+            android:textSize="@dimen/prompt_info_size"/>
+
+        <TextView
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@color/colorList"
+            android:gravity="center"
+            android:text="@string/prompt_manage_pickup_time"
+            android:textColor="@color/colorlisttv"
+            android:textSize="@dimen/prompt_info_size"/>
+
+        <TextView
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5"
+            android:background="@color/colorList"
+            android:gravity="center"
+            android:text="@string/prompt_manage_boxno"
+            android:textColor="@color/colorlisttv"
+            android:textSize="@dimen/prompt_info_size"/>
+
+        <TextView
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.8"
+            android:background="@color/colorList"
+            android:gravity="center"
+            android:text="@string/prompt_manage_statue"
+            android:textColor="@color/colorlisttv"
+            android:textSize="@dimen/prompt_info_size"/>
+        <TextView
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.6"
+            android:background="@color/colorList"
+            android:gravity="center"
+            android:text="上传"
+            android:textColor="@color/colorlisttv"
+            android:textSize="@dimen/prompt_info_size"/>
+
+        <TextView
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@color/colorList"
+            android:gravity="center"
+            android:text="@string/prompt_manage_operate"
+            android:textColor="@color/colorlisttv"
+            android:textSize="@dimen/prompt_info_size"/>
+
+    </TableRow>
+
+    <ListView
+        android:id="@+id/lv_record"
+        android:layout_width="@dimen/tablerow_hegiht"
+        android:layout_height="0dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="68dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_package_id"/>
+</android.support.constraint.ConstraintLayout>

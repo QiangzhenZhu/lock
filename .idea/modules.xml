@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Cabinet-MHC.iml" filepath="$PROJECT_DIR$/Cabinet-MHC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bll/bll.iml" filepath="$PROJECT_DIR$/bll/bll.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Cabinet-trunk/bll-core/bll-core.iml" filepath="$PROJECT_DIR$/../Cabinet-trunk/bll-core/bll-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Cabinet-trunk/device/device.iml" filepath="$PROJECT_DIR$/../Cabinet-trunk/device/device.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Cabinet-trunk/persistent/persistent.iml" filepath="$PROJECT_DIR$/../Cabinet-trunk/persistent/persistent.iml" />
+    </modules>
+  </component>
+</project>

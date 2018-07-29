@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants">
+
+    <TextView
+        android:id="@+id/tv_deliver_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/prompt_list_size"
+        android:text="@string/prompt_manage_deliver_time"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/tv_package_no"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_weight="1.5"
+        android:textColor="@color/colorInfo"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/prompt_list_size"
+        android:text="@string/prompt_manage_package"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/tv_pickup_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/prompt_list_size"
+        android:text="@string/prompt_manage_pickup_time"
+        android:textAlignment="center"/>
+
+
+    <TextView
+        android:id="@+id/tv_box_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_weight="0.5"
+        android:textColor="@color/colorInfo"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/prompt_list_size"
+        android:text="@string/prompt_manage_boxno"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/tv_package_status"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_weight="0.8"
+        android:gravity="center_vertical"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/prompt_list_size"
+        android:text="@string/prompt_manage_statue"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/tv_upload_statue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_weight="0.6"
+        android:textColor="@color/colorInfo"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/prompt_list_size"
+        android:text="上传"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/btn_manager_pick"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:visibility="invisible"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/button_positive_bg"
+        android:text="@string/prompt_manage_pickup"
+        android:textSize="@dimen/prompt_list_size"/>
+</LinearLayout>

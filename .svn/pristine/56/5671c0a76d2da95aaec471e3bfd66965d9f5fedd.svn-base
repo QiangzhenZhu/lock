@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.pickup.PickupRushFragment">
+
+    <View
+        android:id="@+id/view_bg"
+        android:layout_width="460dp"
+        android:layout_height="207dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:background="#30FFFFFF" />
+
+    <View
+        android:id="@+id/line_horizontal"
+        android:layout_width="400dp"
+        android:layout_height="1dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="278dp"
+        android:background="#30FFFFFF" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="240dp"
+        android:drawableStart="@drawable/repeal"
+        android:text="@string/prompt_home_rush"
+        android:textColor="@color/colorWhite"
+        android:textSize="22sp" />
+
+    <TextView
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/et_rush_pwd"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@+id/et_rush_pwd"
+        android:labelFor="@+id/et_rush_pwd"
+        android:text="@string/prompt_pickup_rush_pwd"
+        android:textColor="@color/colorWhite"
+        android:textSize="22sp" />
+
+    <com.hzdongcheng.parcellocker.utils.RichEditText
+        android:id="@+id/et_rush_pwd"
+        style="@style/EditWhiteBackground"
+        android:layout_width="308dp"
+        android:layout_height="48dp"
+        android:layout_alignEnd="@+id/line_horizontal"
+        android:layout_marginTop="320dp"
+        android:hint="@string/hint_pickup_rush_pwd"
+        android:inputType="none"
+        android:maxLength="30" />
+
+    <Button
+        android:id="@+id/bt_submit"
+        android:layout_width="220dp"
+        android:layout_height="70dp"
+        android:layout_alignEnd="@id/view_bg"
+        android:layout_marginTop="427dp"
+        android:background="@drawable/button_positive_bg"
+        android:text="@string/prompt_sure"
+        android:textColor="@color/colorWhite"
+        android:textSize="28sp" />
+
+
+    <Button
+        android:id="@+id/btn_go_back"
+        android:layout_width="220dp"
+        android:layout_height="70dp"
+        android:layout_alignStart="@id/view_bg"
+        android:layout_marginTop="427dp"
+        android:background="@drawable/button_negative_bg"
+        android:text="@string/prompt_manage_cancel"
+        android:textColor="@color/negative_foreground"
+        android:textSize="28sp" />
+
+</RelativeLayout>

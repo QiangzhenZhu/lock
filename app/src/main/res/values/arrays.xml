@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="package_status">
+        <item>@string/prompt_arrays_normal</item>
+        <item>@string/prompt_arrays_lock</item>
+        <item>@string/prompt_arrays_cancel</item>
+        <item>@string/prompt_arrays_Timeout</item>
+        <item></item>
+        <item>@string/prompt_arrays_recaption</item>
+        <item>@string/prompt_arrays_overdue</item>
+        <item>@string/prompt_arrays_error</item>
+        <item>@string/prompt_arrays_pickup</item>
+        <item>@string/prompt_arrays_admin_pickup</item>
+    </string-array>
+
+    <string-array name="box_counts">
+        <item>04</item>
+        <item>06</item>
+        <item>08</item>
+        <item>10</item>
+        <item>12</item>
+        <item>14</item>
+        <item>16</item>
+        <item>18</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>24</item>
+        <item>26</item>
+    </string-array>
+    <string-array name="box_size">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+</resources>

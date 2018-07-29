@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="1000dp"
+    android:layout_height="97dp"
+    android:background="@drawable/item_bg"
+    android:descendantFocusability="blocksDescendants"
+    android:minHeight="97dp"
+    tools:ignore="HardcodedText">
+
+    <TextView
+        android:id="@+id/tv_box_id"
+        android:layout_width="97dp"
+        android:layout_height="97dp"
+        android:background="#30FFFFFF"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/item_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/item_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="54dp"
+        android:ellipsize="marquee"
+        android:maxWidth="600dp"
+        android:singleLine="true"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_retry"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_negative_bg"
+            android:text="重试"
+            android:textColor="@color/negative_foreground" />
+
+        <Button
+            android:id="@+id/bt_take_out"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/button_negative_bg"
+            android:text="已取用"
+            android:textColor="@color/negative_foreground" />
+
+        <TextView
+            android:id="@+id/tv_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="50dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
